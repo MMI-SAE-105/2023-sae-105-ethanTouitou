@@ -1,0 +1,23 @@
+:root {
+
+    /* Color styles */
+    --blanc: rgba(255, 255, 255, 1);
+    --noir: rgba(14, 14, 14, 1);
+    --gris-clair: rgba(234, 234, 234, 1);
+    --gris: rgba(88, 88, 88, 1);
+
+    /* Text-size styles */
+    --title: 28px;
+    --heading-1: 24px;
+    --headinf-2: 16px;
+    --heading-3: 14px;
+    --button: 12px;
+    --text2: 16px;
+    --small: 12px;
+    --bold: 14px;
+    --text: 14px;
+
+    /* Polices de caractère */
+    --font-website: 'Poppins', sans-serif;
+
+}
