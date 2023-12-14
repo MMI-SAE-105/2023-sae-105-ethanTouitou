@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" x-data="{menuIsOpen:false}" :class="menuIsOpen && 'noscroll'">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 </head>
 
-<body>
+<body x-data="{ atTop: true }">
 
-    <header>
+    <header class="header container" @scroll.window="atTop = ( window.scrollY > 100 ? false : true )" :class="{ 'header--atTop' : !atTop 
+        }">
+        <div class="header__logo">
+            <h3 class="header__logo-text"> <a class="header__link-logo" href="/index.html">JohnsonExhibit</a></h3>
+        </div class="header__end">
         <div>
-            <a href="/index.html">
-                <h3>JohnsonExhibit</h3>
-            </a>
-        </div>
-        <div>
-            <button></button>
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn__bar"></span>
+            </button>
             <!-- Menu -->
-            <nav>
-                <ul>
-                    <li><a href="../Philij.html">Philip Johnson</a></li>
-                    <li><a href="../exhibition.html">Philip.J Exhibition</a></li>
-                    <li><a href="../oeuvres.html">Les œuvres</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="#">Billetterie</a></li>
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__list list-unstyled">
+                    <li class="menu__item_primary"><a class="menu__link" href="/fr/Philij.html">Philip Johnson</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/fr/exhibition.html">Philip.J
+                            Exhibition</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="/fr/oeuvres.html">Les œuvres</a></li>
+                    <li class="menu__item_secondary"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
+                    <li class="menu__item_secondary"><a class="menu__link" href="#">Billetterie</a></li>
                 </ul>
             </nav>
             <!-- Fin du menu -->
