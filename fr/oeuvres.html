@@ -36,28 +36,28 @@
             <!-- Fin du menu -->
         </div>
     </header>
-
-    <section x-data="{ 'cards' : async ()=> {
+    <main class="container">
+        <section x-data="{ 'cards' : async ()=> {
           const resp = await fetch('/src/json/card-oeuvres.json');
           return await resp.json();
     }}">
-        <h1>Les œuvres</h1>
+            <h1>Les œuvres</h1>
 
-        <template x-for="card in cards" :key="card.id">
-            <article>
-                <div>
-                    <img :src="card.picture" :alt="card.picture_desc">
-                </div>
+            <template x-for="card in cards" :key="card.id">
+                <article>
+                    <div>
+                        <img :src="card.picture" :alt="card.picture_desc">
+                    </div>
 
-                <div>
-                    <h1 x-text="card.title"></h1>
-                    <p x-text="card.excerpt"></p>
-                    <a :href="card.link">Plus d'info</a>
-                </div>
-            </article>
-        </template>
-    </section>
-
+                    <div>
+                        <h1 x-text="card.title"></h1>
+                        <p x-text="card.excerpt"></p>
+                        <a :href="card.link">Plus d'info</a>
+                    </div>
+                </article>
+            </template>
+        </section>
+    </main>
     <footer class="footer">
         <a class="footer__lien-title" href="/index.html">
             <h3 class="footer__title">JohnsonExhibit</h3>
@@ -65,12 +65,14 @@
 
         <nav>
             <ul class="list-unstyled">
-                <li class="footer__list-menu"><a class="footer__list-item" href="/fr/Philij.html">Philip Johnson</a>
+                <li class="footer__list-menu"><a class="footer__list-item" href="/fr/Philij.html">Philip
+                        Johnson</a>
                 </li>
                 <li class="footer__list-menu"><a class="footer__list-item"
                         href="/fr/exhibition.html">PhilipJExhibition</a>
                 </li>
-                <li class="footer__list-menu"><a class="footer__list-item" href="/fr/contact.html">Contact</a></li>
+                <li class="footer__list-menu"><a class="footer__list-item" href="/fr/contact.html">Contact</a>
+                </li>
             </ul>
         </nav>
 
