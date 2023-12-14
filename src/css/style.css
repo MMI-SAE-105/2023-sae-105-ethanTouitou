@@ -16,7 +16,7 @@
 /* Composants */
 @import "components/header.css";
 /* Pages */
-
+@import "/src/css/pages/contact.css";
 /*Layout*/
 @import "layout/menu.css";
 @import "layout/footer.css"
