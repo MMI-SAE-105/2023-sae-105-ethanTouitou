@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "title": "La Glass House",
+        "excerpt": "Construite en 1948-1949, conçu par Philip Johnson comme sa propre résidence. On l'a appelé son « œuvre signature ».",
+        "link": "/fr/les oeuvres/oeuvre1.html",
+        "picture": "/public/img/img_1.webp",
+        "picture_desc": "La Glass House"
+    },
+    {
+        "id": 2,
+        "title": "550 Madison Avenue",
+        "excerpt": "Le 550 Madison Avenue est un gratte-ciel postmoderne situé sur Madison Avenue, dans le quartier de Midtown Manhattan à New York ",
+        "link": "/fr/les oeuvres/oeuvre2.html",
+        "picture": "/public/img/550_Madison_Avenue_July2015.JPG",
+        "picture_desc": "550 Madison Avenue"
+    },
+    {
+        "id": 3,
+        "title": "The Ware Center",
+        "excerpt": "Construite en 1948-1949, conçu par Philip Johnson comme sa propre résidence. On l'a appelé son « œuvre signature ».",
+        "link": "/fr/les oeuvres/oeuvre3.html",
+        "picture": "/public/img/The_Ware_Center_Millersville_University.jpg",
+        "picture_desc": "The Ware Center"
+    },
+    {
+        "id": 4,
+        "title": "Saint Anselm's Abbey",
+        "excerpt": "Construite en 1948-1949, conçu par Philip Johnson comme sa propre résidence. On l'a appelé son « œuvre signature ».",
+        "link": "/fr/les oeuvres/oeuvre4.html",
+        "picture": "/public/img/St._Anselm's_Abbey_DC_01.JPG",
+        "picture_desc": "Saint Anselm's Abbey"
+    },
+    {
+        "id": 5,
+        "title": "David H. Koch Theater",
+        "excerpt": "Le David H. Koch Theatre est un théâtre de ballet, de danse moderne et autres, faisant partie du Lincoln Center , ",
+        "link": "/fr/les oeuvres/oeuvre5.html",
+        "picture": "/public/img/David_H_Koch_Theater_(48269670522).jpg",
+        "picture_desc": "David H. Koch Theater"
+    },
+    {
+        "id": 6,
+        "title": "Gate of Europe",
+        "excerpt": "Les tours de la Porte de l'Europe sont des immeubles de bureaux jumeaux situés près de la Plaza de Castilla à Madrid",
+        "link": "/fr/les oeuvres/oeuvre6.html",
+        "picture": "/public/img/Torres_KIO_(37719354701).jpg",
+        "picture_desc": "Gate of Europe"
+    },
+    {
+        "id": 7,
+        "title": "Christ Cathedral",
+        "excerpt": "Officieusement connue sous le nom de cathédrale de cristal , est une église américaine du diocèse d'Orange",
+        "link": "/fr/les oeuvres/oeuvre7.html",
+        "picture": "/public/img/2018_Christ_Cathedral_campus_-_Garden_Grove,_California_01.jpg",
+        "picture_desc": "Christ Cathedral"
+    },
+    {
+        "id": 8,
+        "title": "Fort Worth Water Gardens",
+        "excerpt": "construits en 1974, sont situés à l'extrémité sud du centre-ville de Fort Worth, entre les rues Houston et Commerce.",
+        "link": "/fr/les oeuvres/oeuvre8.html",
+        "picture": "/public/img/Fort_Worth_Water_Garden.jpg",
+        "picture_desc": "Fort Worth Water Gardens"
+    }
+]
