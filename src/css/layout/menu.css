@@ -36,7 +36,7 @@
 }
 
 .header__logo {
-    width: block;
+    width: 100%;
 }
 
 .header__logo-lang {
