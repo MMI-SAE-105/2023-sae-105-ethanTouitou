@@ -1,18 +1,21 @@
 /* Polices de caractère */
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 /* Librairies */
 
-@import "/src/css/vendors/normalize";
+@import "/src/css/vendors/normalize.css";
 
 /* Variables */
 @import "/src/css/utils/variables.css";
 
 /* Règles générales */
-
+@import "/src/css/base/main.css";
 
 /* Règles de composition */
 
 
 /* Composants */
-
+@import "components/header.css";
 /* Pages */
+
+/*Layout*/
+@import "layout/menu.css"
