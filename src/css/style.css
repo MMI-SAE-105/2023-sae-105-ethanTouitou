@@ -18,4 +18,5 @@
 /* Pages */
 
 /*Layout*/
-@import "layout/menu.css"
+@import "layout/menu.css";
+@import "layout/footer.css"
