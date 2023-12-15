@@ -40,7 +40,7 @@
         <h1 class="article__title linetitle">Fort Worth Water Gardens</h1>
         <img src="/public/img/Fort_Worth_Water_Gardens_2003.jpg" alt="Fort Worth Water Gardens">
         <section>
-            <p>
+            <p class="article__text">
                 Les Fort Worth Water Gardens sont un espace paysager contemporain situé au centre de Fort Worth, au
                 Texas. Conçus par
                 l'architecte Philip Johnson, ces jardins offrent une expérience unique en intégrant l'eau, la pierre et
@@ -48,7 +48,7 @@
                 dans un espace urbain.
             </p>
 
-            <p>
+            <p class="article__text">
                 Ce site, achevé en 1974, se compose de plusieurs sections distinctes. La pièce centrale est l'Active
                 Pool, une grande
                 zone où l'eau coule sur des marches en béton dans un environnement qui invite à l'exploration et à la
@@ -58,14 +58,14 @@
                 d'eau calme entourés de verdure.
             </p>
 
-            <p>
+            <p class="article__text">
                 Cependant, l'une des sections les plus connues et impressionnantes est la section des Water Walls,
                 composée de murs
                 d'eau monumentaux. L'un de ces murs, le Water Wall le plus célèbre, est une cascade qui dévale une
                 surface en béton et
                 offre un spectacle aquatique spectaculaire.
             </p>
-            <p>
+            <p class="article__text">
                 Les Fort Worth Water Gardens sont devenus une attraction populaire, attirant les résidents et les
                 visiteurs qui viennent
                 pour profiter de cet espace paisible au cœur de la ville, ainsi que pour admirer l'architecture et
@@ -76,13 +76,35 @@
             </p>
         </section>
         <section>
-            <ul>
-                <li><img src="/public/img/fort-worth-water-gardens-at-night-012720-rospotte-photography.jpg"
-                        alt="Fort Worth Water Gardens"></li>
-                <li><img src="/public/img/LRM_EXPORT_132978562851133_20190715_210416889-010-82417bbb5056a34_82417e3d-5056-a348-3add071a7c691426.jpg"
-                        alt="Fort Worth Water Gardens"></li>
-                <li><img src="public/img/7557260f6f669f5d608c52a621dac974.jpg" alt="Fort Worth Water Gardens"></li>
-            </ul>
+            <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+                <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                    @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                    &lt;
+                </button>
+                <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                    @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                    >
+                </button>
+                <div class="carrousel_parent-ecrans" x-ref="parent"
+                    @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg-2 copie 7.webp"
+                                alt="The Ware Center" alt="oeuvre 1">
+                        </figure>
+                    </div>
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="public/img/immgg copie 8.webp" alt="oeuvre 2">
+                        </figure>
+                    </div>
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg-1 copie 7.webp" alt="oeuvre 3">
+                        </figure>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <footer class="footer">
