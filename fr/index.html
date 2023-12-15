@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen:false}" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{ atTop: true }">
+
+    <header class="header container" @scroll.window="atTop = ( window.scrollY > 100 ? false : true )" :class="{ 'header--atTop' : !atTop 
+        }">
+        <div class="header__logo">
+            <h3 class="header__logo-text"> <a class="header__link-logo" href="/fr/index.html">JohnsonExhibit</a></h3>
+        </div class="header__end">
+        <div>
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn__bar"></span>
+            </button>
+            <!-- Menu -->
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__list list-unstyled">
+                    <li class="menu__item_primary"><a class="menu__link" href="fr/Philij.html">Philip Johnson</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="fr/exhibition.html">Philip.J
+                            Exhibition</a></li>
+                    <li class="menu__item_primary"><a class="menu__link" href="fr/oeuvres.html">Les œuvres</a></li>
+                    <li class="menu__item_secondary"><a class="menu__link" href="fr/contact.html">Contact</a></li>
+                    <li class="menu__item_secondary"><a class="menu__link" href="#">Billetterie</a></li>
+                </ul>
+            </nav>
+            <!-- Fin du menu -->
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h1 class="article__title linetitle">Bienvenue</h1>
+            <p class="bienvenue__text">Découvrez la grandeur de l'architecture moderne à travers l'œuvre de Philip
+                Johnson dans notre exposition
+                "JohnsonArchitecturalJourney.com".
+
+            <p class="bienvenue__text">Cette exposition, hébergée dans un cadre aussi élégant qu'inspirant, met en
+                lumière les créations
+                les plus emblématiques
+                de Johnson.</p>
+            </p>
+        </section>
+
+        <section>
+            <h1 class="article__title linetitle">L’exposition</h1>
+            <div class="card__img">
+                <img class="card__img--border" src="public/img/img_1.webp" alt="maison en verre">
+            </div>
+            <div class="card__caption">
+                <h1 class="card__title">La Glass House</h1>
+                <p class="card__excerpt">Construite en 1948-1949, conçu par Philip Johnson comme sa propre
+                    résidence. On l'a appelé son «
+                    œuvre signature ».</p>
+                <a class="card__link uppercase" href="/fr/les oeuvres/oeuvre1.html">LIRE LA SUITE</a>
+            </div>
+
+
+            <p class="exposition__text">Pour découvrir les œuvres majeures présentes dans l’exposition, cliquez ici !
+            </p>
+
+            <a class="boutton__exposition" href="/fr/oeuvres.html">Découvrir les œuvres
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="footer__lien-title" href="/index.html">
+            <h3 class="footer__title">JohnsonExhibit</h3>
+        </a>
+
+        <nav>
+            <ul class="list-unstyled">
+                <li class="footer__list-menu"><a class="footer__list-item" href="fr/Philij.html">Philip Johnson</a></li>
+                <li class="footer__list-menu"><a class="footer__list-item"
+                        href="fr/exhibition.html">PhilipJExhibition</a></li>
+                <li class="footer__list-menu"><a class="footer__list-item" href="fr/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <h3 class="footer__subheading">adresse</h3>
+            <address class="footer__adress">Fondation Cartier<br>261 Bd Raspail<br>75014 Paris</address>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
