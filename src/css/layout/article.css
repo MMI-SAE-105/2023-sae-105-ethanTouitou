@@ -40,3 +40,14 @@
     font-family: var(--font-website);
     padding-bottom: var(--space4x);
 }
+
+.article__text {
+    color: var(--noir);
+    font-size: var(--text);
+    font-family: var(--font-website);
+    font-weight: 400;
+}
+
+.container--article__text {
+    padding: var(--space4x) var(--space4x);
+}
