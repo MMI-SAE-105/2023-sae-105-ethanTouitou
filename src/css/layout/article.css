@@ -46,6 +46,7 @@
     font-size: var(--text);
     font-family: var(--font-website);
     font-weight: 400;
+    padding: var(--space2x);
 }
 
 .container--article__text {
