@@ -32,3 +32,11 @@
     padding-top: var(--space5x);
     padding-bottom: var(--space2x);
 }
+
+.bienvenue__text {
+    text-align: center;
+    color: var(--noir);
+    font-size: var(--text2);
+    font-family: var(--font-website);
+    padding-bottom: var(--space4x);
+}
