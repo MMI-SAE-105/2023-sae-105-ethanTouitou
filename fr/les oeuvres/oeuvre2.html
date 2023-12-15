@@ -78,11 +78,36 @@
 
         </section>
         <section>
-            <ul>
-                <li><img src="/public/img/Sony_Building_by_David_Shankbone_crop.jpg" alt="550 Madison Avenue"></li>
-                <li><img src="/public/img/Sony_Building_by_Matthew_Bisanz.jpg" alt="550 Madison Avenue"></li>
-                <li><img src="/public/img/Madison_Av_Nov_2021_03.jpg" alt="550 Madison Avenue"></li>
-            </ul>
+            <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+                <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                    @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                    &lt;
+                </button>
+                <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                    @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                    >
+                </button>
+                <div class="carrousel_parent-ecrans" x-ref="parent"
+                    @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg-2 copie.webp" alt="The Ware Center"
+                                alt="oeuvre 1">
+                        </figure>
+                    </div>
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg copie 2.webp" alt="oeuvre 2">
+                        </figure>
+                    </div>
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg-1 copie.webp" alt="oeuvre 3">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            </div>
         </section>
 
         <footer class="footer">
