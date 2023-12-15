@@ -46,7 +46,7 @@
             <template x-for="card in cards" :key="card.id">
                 <article class="section__card card">
                     <div class="card__img">
-                        <img :src="card.picture" :alt="card.picture_desc">
+                        <img class="card__img--border" :src="card.picture" :alt="card.picture_desc">
                     </div>
 
                     <div class="card__caption">
