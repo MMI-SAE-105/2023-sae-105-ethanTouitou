@@ -37,10 +37,10 @@
         </div>
     </header>
     <main class="container">
-        <h1>Christ Cathedra</h1>
+        <h1 class="article__title linetitle">Christ Cathedra</h1>
         <img src="/public/img/Crys-ext.jpg" alt="Christ Cathedra">
         <section>
-            <p>
+            <p class="article__text">
                 Le Christ Cathedral, anciennement connu sous le nom de Crystal Cathedral, est une église emblématique
                 située à Garden
                 Grove, en Californie. Cette structure est célèbre pour son design innovant et contemporain, ainsi que
@@ -48,21 +48,22 @@
                 utilisation de verre.
             </p>
 
-            <p>Conçue par l'architecte Philip Johnson dans les années 1970, la cathédrale doit son surnom de "Crystal
+            <p class="article__text">Conçue par l'architecte Philip Johnson dans les années 1970, la cathédrale doit son
+                surnom de "Crystal
                 Cathedral" à son
                 extérieur entièrement revêtu de verre, offrant une vue translucide depuis l'extérieur et créant une
                 atmosphère lumineuse
                 à l'intérieur.
             </p>
 
-            <p>
+            <p class="article__text">
                 À l'origine, la Crystal Cathedral était le siège de l'Église du jardin de la Communauté, une
                 congrégation protestante
                 dirigée par le révérend Robert H. Schuller. Le design novateur de Johnson a contribué à faire de cette
                 église un lieu de
                 culte et un site touristique populaire en raison de son architecture distinctive.
             </p>
-            <p>
+            <p class="article__text">
                 En 2012, la propriété a été achetée par l'Église catholique romaine et depuis lors, après des
                 rénovations majeures, elle
                 est devenue le Christ Cathedral, servant de siège pour le diocèse catholique de Orange. Cette conversion
@@ -73,11 +74,35 @@
             </p>
         </section>
         <section>
-            <ul>
-                <li><img src="/public/img/CrystalCathedralAvond.JPG" alt="Christ Cathedra"></li>
-                <li><img src="/public/img/CrystalCathedral.jpg" alt="Christ Cathedra"></li>
-                <li><img src="/public/img/Christ_Cathedral_Interior_July_17_2019.jpg" alt="Christ Cathedra"></li>
-            </ul>
+            <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+                <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                    @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                    &lt;
+                </button>
+                <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                    @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                    >
+                </button>
+                <div class="carrousel_parent-ecrans" x-ref="parent"
+                    @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg-2 copie 6.webp"
+                                alt="The Ware Center" alt="oeuvre 1">
+                        </figure>
+                    </div>
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg-1 copie 6.webp" alt="oeuvre 2">
+                        </figure>
+                    </div>
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg-1 copie 7.webp" alt="oeuvre 3">
+                        </figure>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <footer class="footer">

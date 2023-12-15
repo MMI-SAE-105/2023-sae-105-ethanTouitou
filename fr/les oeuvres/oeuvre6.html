@@ -72,36 +72,60 @@
             </p>
         </section>
         <section>
-            <ul>
-                <li><img src="/public/img/1000_F_297784937_PVB2Tdzt6J6ca1ScUCfKf2o9y8Ahgtsw.jpg" alt="Gate of Europe">
-                </li>
-                <li><img src="/public/img/PlazaCastillaMadrid.jpeg" alt="Gate of Europe"></li>
-                <li><img src="/public/img/Torres_KIO_(37719354701).jpg" alt="Gate of Europe"></li>
-            </ul>
-        </section>
-
-        <footer class="footer">
-            <a class="footer__lien-title" href="/index.html">
-                <h3 class="footer__title">JohnsonExhibit</h3>
-            </a>
-
-            <nav>
-                <ul class="list-unstyled">
-                    <li class="footer__list-menu"><a class="footer__list-item" href="/fr/Philij.html">Philip Johnson</a>
-                    </li>
-                    <li class="footer__list-menu"><a class="footer__list-item"
-                            href="/fr/exhibition.html">PhilipJExhibition</a>
-                    </li>
-                    <li class="footer__list-menu"><a class="footer__list-item" href="/fr/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div>
-                <h3 class="footer__subheading">adresse</h3>
-                <address class="footer__adress">Fondation Cartier<br>261 Bd Raspail<br>75014 Paris</address>
+            <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+                <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                    @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                    &lt;
+                </button>
+                <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                    @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                    >
+                </button>
+                <div class="carrousel_parent-ecrans" x-ref="parent"
+                    @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg copie 6.webp" alt="The Ware Center"
+                                alt="oeuvre 1">
+                        </figure>
+                    </div>
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg-1 copie 5.webp" alt="oeuvre 2">
+                        </figure>
+                    </div>
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img" src="/public/img/immgg-2 copie 5.webp" alt="oeuvre 3">
+                        </figure>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
 
-        </footer>
+    <footer class="footer">
+        <a class="footer__lien-title" href="/index.html">
+            <h3 class="footer__title">JohnsonExhibit</h3>
+        </a>
+
+        <nav>
+            <ul class="list-unstyled">
+                <li class="footer__list-menu"><a class="footer__list-item" href="/fr/Philij.html">Philip Johnson</a>
+                </li>
+                <li class="footer__list-menu"><a class="footer__list-item"
+                        href="/fr/exhibition.html">PhilipJExhibition</a>
+                </li>
+                <li class="footer__list-menu"><a class="footer__list-item" href="/fr/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <h3 class="footer__subheading">adresse</h3>
+            <address class="footer__adress">Fondation Cartier<br>261 Bd Raspail<br>75014 Paris</address>
+        </div>
+
+    </footer>
 
 
 </body>
