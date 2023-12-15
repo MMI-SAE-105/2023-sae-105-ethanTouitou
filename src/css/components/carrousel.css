@@ -23,7 +23,7 @@
      position: relative;
      max-width: 500px;
      margin: auto;
-     padding-bottom: var(--space3x);
+     padding-top: var(--space4x);
  }
 
  .carrousel_btn {
