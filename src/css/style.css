@@ -15,6 +15,7 @@
 
 /* Composants */
 @import "components/header.css";
+@import "components/cards.css";
 /* Pages */
 @import "/src/css/pages/contact.css";
 /*Layout*/

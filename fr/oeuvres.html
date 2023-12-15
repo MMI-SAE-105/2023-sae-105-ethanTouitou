@@ -44,21 +44,17 @@
             <h1 class="article__title linetitle">Les œuvres</h1>
 
             <template x-for="card in cards" :key="card.id">
-
-                <article class="card">
-                    <div class="card__img duotone">
+                <article class="section__card card">
+                    <div class="card__img">
                         <img :src="card.picture" :alt="card.picture_desc">
                     </div>
-                    <h3 class="card__title">
-                        <a class="card__title-link" :href="card.link" x-text="card.title"></a>
-                    </h3>
+
                     <div class="card__caption">
-                        <p class="card__date" x-text="card.date"></p>
+                        <h1 class="card__title" x-text="card.title"></h1>
                         <p class="card__excerpt" x-text="card.excerpt"></p>
-                        <a class="card__link morelink" :href="card.link">Plus d'info</a>
+                        <a class="card__link uppercase" :href="card.link">lire la suite</a>
                     </div>
                 </article>
-
             </template>
         </section>
     </main>
