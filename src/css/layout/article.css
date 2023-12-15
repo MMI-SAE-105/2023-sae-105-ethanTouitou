@@ -22,3 +22,12 @@
     height: 2px;
     background-color: black;
 }
+
+.exposition__text {
+    font-size: var(--text);
+    font-family: var(--font-website);
+    color: var(--noir);
+    text-align: center;
+    padding-top: var(--space5x);
+    padding-bottom: var(--space2x);
+}
