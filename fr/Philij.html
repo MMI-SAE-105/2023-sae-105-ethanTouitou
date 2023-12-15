@@ -70,56 +70,56 @@
 
         <section>
             <h2 class="article__title linetitle">Ses œuvre</h2>
-            <div>
-                <div>
-                    <figure>
-                        <div>
-                            <img src="../public/img/The_Ware_Center_Millersville_University.jpg" alt="The Ware Center">
-                        </div>
-                        <div>
-                            <h3>The Ware Center à Lancaster, Pennsylvania</h3>
-                        </div>
-                    </figure>
+            <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+                <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                    @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                    &lt;
+                </button>
+                <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                    @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                    >
+                </button>
+                <div class="carrousel_parent-ecrans" x-ref="parent"
+                    @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img"
+                                src="/public/img/tinify-2023-12-15T11_7_39/Le-voyage-de-Chihiro-1 (1) 4.webp"
+                                alt="The Ware Center" alt="oeuvre 1">
+                            <figcaption>The Ware Center à Lancaster, Pennsylvania</figcaption>
+                        </figure>
+                    </div>
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img"
+                                src="/public/img/tinify-2023-12-15T11_7_39/Le-voyage-de-Chihiro-1 (1) 4-2.webp"
+                                alt="oeuvre 2">
+                            <figcaption>Gate of Europe towers in Madrid, Spain</figcaption>
+                        </figure>
+                    </div>
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img"
+                                src="/public/img/tinify-2023-12-15T11_7_39/Le-voyage-de-Chihiro-1 (1) 4.webp"
+                                alt="oeuvre 3">
+                            <figcaption>The Crystal Cathedral</figcaption>
+                        </figure>
+                    </div>
+                    <div id="ecran-4" class="carrousel_ecran">
+                        <figure>
+                            <img class="carrousel_ecran_img"
+                                src="/public/img/tinify-2023-12-15T11_7_39/Le-voyage-de-Chihiro-1 (1) 4-1.webp"
+                                alt="oeuvre 4">
+                            <figcaption>550 Madison Avenue</figcaption>
+                        </figure>
+                    </div>
                 </div>
-
-                <div>
-                    <figure>
-                        <div>
-                            <img src="/public/img/PlazaCastillaMadrid.jpeg" alt="Gate of Europe">
-                        </div>
-                        <div>
-                            <h3>Gate of Europe towers in Madrid, Spain</h3>
-                        </div>
-                    </figure>
-                </div>
-
-                <div>
-                    <figure>
-                        <div>
-                            <img src="/public/img/2018_Christ_Cathedral_campus_-_Garden_Grove,_California_01.jpg"
-                                alt="The Crystal Cathedral">
-                        </div>
-                        <div>
-                            <h3>The Crystal Cathedral</h3>
-                        </div>
-                    </figure>
-                </div>
-
-                <div>
-                    <figure>
-                        <div>
-                            <img src="/public/img/550_Madison_Avenue_July2015.JPG" alt="550 Madison Avenue">
-                        </div>
-                        <div>
-                            <h3>550 Madison Avenue</h3>
-                        </div>
-                    </figure>
-                </div>
+            </div>
             </div>
         </section>
 
         <section>
-            <h2>frise</h2>
+            <h2 class="article__title linetitle">frise</h2>
 
         </section>
     </main>

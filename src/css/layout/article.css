@@ -3,6 +3,7 @@
     font-family: var(--font-website);
     font-weight: 500;
     color: var(--noir);
+    text-align: center;
 
 }
 
@@ -10,7 +11,6 @@
     text-decoration: none;
     text-transform: uppercase;
     position: relative;
-    display: inline-block;
     padding-bottom: var(--space1x);
 }
 
